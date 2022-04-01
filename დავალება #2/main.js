@@ -22,9 +22,8 @@ const text2 = "0";
 // მაგ. [1, 2, 3, 4]
 
 // >>> კოდი დაწერეთ აქ 
-
-const isFalse = [];
-const isTrue = [];
+const isFalse = [ boolean1, boolean2];
+const isTrue = [ num1, num2, emptyString,  text, text2];
 
 //
 
@@ -32,8 +31,8 @@ const isTrue = [];
 // შეცვალეთ ერთი ასო რომ მიიღოთ ჭეშმარიტი დებულება
 // მოკლედ ახსენით მუშაობის პრინციპი თუ რატომ იმოქმედა
 
-console.log("abc" > "ah")
-console.log(2 === "004")
+console.log("ahc" > "ah")
+console.log(2 !== "004")
 
 
 
@@ -43,7 +42,11 @@ console.log(2 === "004")
 // 18 წელზე შესთავაზეთ სასმელი
 
 // >>> კოდი დაწერეთ აქ 
-
+let age = prompt("რამდენი წლის ხარ?")
+if (age >= 18 && age < 100 ) {
+  alert( 'ჩვენი ბოტი გთავაზობს სასმელს' );
+}
+console.log(alert)
 
 //
 
@@ -51,7 +54,21 @@ console.log(2 === "004")
 // მოიფიქრეთ 2 if else-ის მაგალითი თქვენით
 
 // >>> კოდი დაწერეთ აქ
+let person = prompt("მარველის საყვარელი პერსონაჟი")
+if (person ==="რკინის კაცი") {
+  alert ("შემოდი");
+} else {
+  alert( 'კიდევ ერთი ცდა გაქვს' );
+}
+console.log(alert)
 
+let code = prompt("ახლა დაასახელე კოდი")
+if (code ==="კოდი") {
+  alert ("შეგიძლია შესვლა");
+} else {
+  alert( 'პაკააააა' );
+}
+console.log(alert)
 //
 
 
@@ -59,6 +76,8 @@ console.log(2 === "004")
 
 // >>> კოდი დაწერეთ აქ
 
+let result = (person === "რკინის კაცი" ) ? 'Right!' : 'Wrong.';
+console.log(result)
 //
 
 
@@ -70,7 +89,7 @@ console.log(2 === "004")
   სხვა ყველა ფერი=undefinde)
 */
 
-let colorId = 3
+let colorId = 3;
 
 // დაწერეთ if ისე, რომ როდესაც ჩვენ
 // შევცვლით მაღლა განსაზღვრულ ცვლადს გავიგოთ
@@ -79,8 +98,16 @@ let colorId = 3
 
 
 // >>> კოდი დაწერეთ აქ
-
-
+if (colorId == 4) {
+  message = 'თეთრი';
+} else if (colorId == 3) {
+  message = 'წითელი';
+} else if (colorId == 1) {
+  message = 'ლურჯი';
+} else if (colorId == 0) {
+  message = 'შავი';
+} else {message = 'undefinde'}
+console.log(message)
 //
 
 
@@ -88,9 +115,16 @@ let colorId = 3
 // გადაიყვანეთ If ternary operator-ში მაგ. (true ? 1 : 2) 
 
 // >>> კოდი დაწერეთ აქ
+let color = 
+  (colorId === 4) ? 'თეთრი' :
+  (colorId === 3) ? 'წითელი':
+  (colorId === 1) ? 'ლურჯი':
+  (colorId === 0) ? 'შავი' : 'undefinde';
+
+  console.log(color)
 
 
-//
+
 
 
 // <------- დავალება Switch ---------#### //
@@ -100,7 +134,23 @@ let colorId = 3
 
 
 // >>> კოდი დაწერეთ აქ
-
+switch (colorId) {
+  case 0:
+    color = "შავი";
+    break;
+  case 1:
+    color = "ლურჯი";
+    break;
+  case 3:
+    color = "წითელი";
+    break;
+  case 4:
+    day = "თეთრი";
+    break;
+  default: 
+    color = "undefinde";
+}
+console.log(color)
 
 //
 
@@ -138,7 +188,21 @@ function myFun() {
   let x = prompt("მე მზად არ ვარ პასუხისათვის")
 
   // >>> კოდი დაწერეთ აქ გამოიყენეთ Switch
-
+  
+  switch (x) {
+    case "a":
+      answer = "ჰეი";
+      break;
+    case "b":
+      answer = "ჰაი";
+      break;
+    case "c":
+      answer = "გამარჯობა";
+      break;
+    default:
+      answer = "??";
+      return
+  }
 
   //
 
