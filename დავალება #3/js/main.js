@@ -11,11 +11,51 @@
 */
 
 ////// =>> კოდი დაწერეთ აქ
+let myArray = [];
 
+function letNumbers(){
+myArray.Length = 5;
+for (i=0; i < myArray.Length; i++) {
+    let a=Number(prompt("ჩაწერე სასურველი რიცხვი.","მაგ.123")); 
+    if (isNaN(a)) {
+      a=Number(prompt("ჩაწერე მხოლოდ რიცხვი!"));
+    }
+    myArray.push(+a);
+}
+}
+// შეიქმნა მასივი რიცხვებისთვის
 
+let x;
 
-//////
+function letOperator() {
+  let operator = prompt("ჩაწერე არითმეტიკული მოქმედება - ან + ან *");
+  
+  if(operator == "*" || operator == "+" || operator == "-") {
+    x = operator;
+  }  else{
+    operator = prompt("ჩაწერე არითმეტიკული მოქმედება - ან + ან *");
+  }
+}
 
+// არითმეტიკული მოქმედებებისთვის ცვლადი
+
+letNumbers();
+letOperator();
+// ფუნქციების გამოძახება
+
+function calculate(myArray, x) {  
+  if (x === '+') {
+    result = myArray[0] + myArray[1] + myArray[2] + myArray[3] + myArray[4]
+  } else if (x === '-') {
+    result =  myArray[0] - myArray[1] - myArray[2] - myArray[3] - myArray[4]
+  } else if (x === '*') {
+    result =  myArray[0] * myArray[1] * myArray[2] * myArray[3] * myArray[4]
+  }
+ 
+  return result;
+}
+
+document.write(calculate(myArray, x));
 
 
 // <-------- თანაკვეთა -------#### //
@@ -29,6 +69,18 @@ const Arr1 = [1, 23, 3, 34, 54, 6];
 const Arr2 = [23, 3, 123, 34, 43, 4, 41]
 
 ////// =>> კოდი დაწერეთ აქ
+const intSection = [];
+function Intersection()  {
+  for (i=0; i < Arr1.length; i++) {
+    for (j=0; j < Arr2.length; j++) {
+      if (Arr1[i] === Arr2[j]) {
+        intSection.push(Arr1[i])
+      }
+    }
+  }
+}
+Intersection();
+console.log(intSection);
 
 
 
@@ -44,6 +96,17 @@ const Arr2 = [23, 3, 123, 34, 43, 4, 41]
 
 
 ////// =>> კოდი დაწერეთ აქ
+function whileLoop() {
+  let i = 1;
+  
+  setInterval(function() {
+    if (i <= 10){
+        document.write(i++);
+    } 
+}, 1000);
+} 
+
+whileLoop();
 
 
 
@@ -60,7 +123,17 @@ const Arr2 = [23, 3, 123, 34, 43, 4, 41]
 
 ////// =>> კოდი დაწერეთ აქ
 
+function maxMath(Arr1) {
+  let max = [];
+  for (i = 0; i < Arr1.length; i++ ) {
+    if (Arr1[i] > max) {
+      max = Arr1[i];
+    }
+  }
+  return max
+}
 
+console.log(maxMath(Arr1))
 
 //////
 
@@ -75,7 +148,15 @@ const Arr2 = [23, 3, 123, 34, 43, 4, 41]
  */
 
 ////// =>> კოდი დაწერეთ აქ
+let money=prompt("შეიყვანე სასურველი თანხა");
+let month=prompt("შეიყვანე თვეების რაოდენობა");
+
+if (month > 0 && month < 7 ) {
+  console.log(money * 10 / 100 +money)
+} else if (month > 6 && month < 13 ) {
+  console.log(money * 14 / 100 +money)
+} else if (month > 12) {
+  console.log(money * 20 / 100 +money)
+}
 
 
-
-//////
